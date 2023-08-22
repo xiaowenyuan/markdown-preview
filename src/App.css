@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Space+Mono:wght@400;700&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: #B8A3D0;
+  font-family: 'Space Grotesk', sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.App{
+  display:flex;
+  flex-direction:row;
+  width:100vw;
+  height:100vh;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  overflow:hidden;
+}
+.editor-wrapper, .preview-wrapper{
+  height:90%;
+  width:40%;
+  margin:0;
+  top:0;
+  padding:0% 2.5%;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: top;
+  overflow:hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.header{
+  width:100%;
+  color:#4CF4F1;
+  padding:0;
+  margin:0;
+  top:0;
+  font-size:2em;
+  font-size:700;
+  font-family: 'Space Grotesk', sans-serif;
+  position:relative;
+  margin-bottom:1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header:after{
+  content:' ';
+  width:100%;
+  position:absolute;
+  bottom:-0.6em;
+  left:0;
+  height:0.5em;
+  background-color:#4CF4F1;
+}
+#editor, #preview{
+  background-color:transparent;
+  border:none;
+  width:100%;
+  height:100%;
+  overflow-y:auto;
+}
+
+#preview img{
+  width:100%;
+}
+#editor{
+  font-family: 'Space Mono', monospace;
 }
